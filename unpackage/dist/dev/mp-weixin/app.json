@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "鱼书",
+    "navigationBarBackgroundColor": "#FF80AB",
+    "backgroundColor": "#EFEFEF"
+  }
+}
