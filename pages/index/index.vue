@@ -1,21 +1,9 @@
 <template>
 	<view class="content">
-        <swiper class="swiper" :indicator-dots="true" :autoplay="false" :interval="3000" :duration="1000">
-        	<swiper-item>
-        		<view class="swiper-item">
-					<image style="width: 100%;" src="//edu-image.nosdn.127.net/337d29d51ba944b99169dbad13bb9639.jpg?imageView&crop=0_0_1242_573&quality=100&thumbnail=750y346&type=webp" mode="scaleToFill"></image>
-				</view>
-        	</swiper-item>
-        	<swiper-item>
-        		<view class="swiper-item">
-					<image style="width: 100%;" src="//edu-image.nosdn.127.net/e1879b3c3b0a4702b66b0e10538d79ad.png?imageView&crop=0_0_1242_573&quality=100&thumbnail=750y346&type=webp" mode="scaleToFill"></image>
-				</view>
-        	</swiper-item>
-        	<swiper-item>
-        		<view class="swiper-item">
-					<image style="width: 100%;" src="//edu-image.nosdn.127.net/a33fc91fd60542c597b89b764cbc4bbd.jpg?imageView&crop=0_0_1242_573&quality=100&thumbnail=750y346&type=webp" mode="scaleToFill"></image>
-				</view>
-        	</swiper-item>
+        <swiper autoplay="true" indicator-dots="true" circular="true" style="height: 400upx;">
+            <swiper-item v-for="(img,key) in imgUrls" :key="key">
+                <image :src="img" style="height: 400upx;" />
+            </swiper-item>
         </swiper>
 		
 		<view class="">
@@ -28,7 +16,11 @@
 	export default {
 		data() {
 			return {
-				
+				imgUrls: [
+				    'https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg',
+				    'https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/muwu.jpg',
+				    'https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/cbd.jpg'
+				]
 			}
 		},
 		onLoad() {
@@ -57,5 +49,8 @@
 	.swiper{
 		width: 750upx;
 		height: 346upx;
+	}
+	image {
+	    width: 100%;
 	}
 </style>

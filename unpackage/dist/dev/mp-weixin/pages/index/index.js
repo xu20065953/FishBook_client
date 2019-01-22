@@ -295,21 +295,13 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 {
   data: function data() {
-    return {};
+    return {
+      imgUrls: [
+      'https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg',
+      'https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/muwu.jpg',
+      'https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/cbd.jpg'] };
 
 
   },
@@ -353,53 +345,25 @@ var render = function() {
       _c(
         "swiper",
         {
-          staticClass: "swiper",
+          staticStyle: { height: "400rpx" },
           attrs: {
-            "indicator-dots": true,
-            autoplay: false,
-            interval: 3000,
-            duration: 1000
+            autoplay: "true",
+            "indicator-dots": "true",
+            circular: "true"
           }
         },
-        [
-          _c("swiper-item", { attrs: { mpcomid: "5c2d7dc1-0" } }, [
-            _c("view", { staticClass: "swiper-item" }, [
+        _vm._l(_vm.imgUrls, function(img, key) {
+          return _c(
+            "swiper-item",
+            { key: key, attrs: { mpcomid: "5c2d7dc1-0-" + key } },
+            [
               _c("image", {
-                staticStyle: { width: "100%" },
-                attrs: {
-                  src:
-                    "//edu-image.nosdn.127.net/337d29d51ba944b99169dbad13bb9639.jpg?imageView&crop=0_0_1242_573&quality=100&thumbnail=750y346&type=webp",
-                  mode: "scaleToFill"
-                }
+                staticStyle: { height: "400rpx" },
+                attrs: { src: img }
               })
-            ])
-          ]),
-          _c("swiper-item", { attrs: { mpcomid: "5c2d7dc1-1" } }, [
-            _c("view", { staticClass: "swiper-item" }, [
-              _c("image", {
-                staticStyle: { width: "100%" },
-                attrs: {
-                  src:
-                    "//edu-image.nosdn.127.net/e1879b3c3b0a4702b66b0e10538d79ad.png?imageView&crop=0_0_1242_573&quality=100&thumbnail=750y346&type=webp",
-                  mode: "scaleToFill"
-                }
-              })
-            ])
-          ]),
-          _c("swiper-item", { attrs: { mpcomid: "5c2d7dc1-2" } }, [
-            _c("view", { staticClass: "swiper-item" }, [
-              _c("image", {
-                staticStyle: { width: "100%" },
-                attrs: {
-                  src:
-                    "//edu-image.nosdn.127.net/a33fc91fd60542c597b89b764cbc4bbd.jpg?imageView&crop=0_0_1242_573&quality=100&thumbnail=750y346&type=webp",
-                  mode: "scaleToFill"
-                }
-              })
-            ])
-          ])
-        ],
-        1
+            ]
+          )
+        })
       ),
       _c("view", {}, [_vm._v("\n\t\t\tdsad\n\t\t")])
     ],
