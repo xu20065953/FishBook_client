@@ -1,6 +1,30 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/bookmark/index",
+			"style": {
+				"navigationBarTitleText": "书签"
+			}
+		},
+		{
+			"path": "pages/library/index",
+			"style": {
+				"navigationBarTitleText": "图书"
+			}
+		},
+		{
+			"path": "pages/guide/index",
+			"style": {
+				"navigationBarTitleText": "导航"
+			}
+		},
+		{
+			"path": "pages/bookspeak/index",
+			"style": {
+				"navigationBarTitleText": "听书"
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "鱼书"
@@ -11,6 +35,35 @@
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "鱼书",
 		"navigationBarBackgroundColor": "#FF80AB",
-		"backgroundColor": "#EFEFEF"
+		"backgroundColor": "#EFEFEF",
+		"navigationStyle": "default"
+	},
+	"tabBar": {  //底部选项卡
+		"color": "#444444",
+		"selectedColor": "#FF80AB",
+		"borderStyle": "black",
+		"list": [  //tab选项
+			{
+				"text": "书签",
+				"pagePath":"pages/bookmark/index",
+				"iconPath": "static/img/yuedu.png",
+				"selectedIconPath": "static/img/yuedu_hl.png"
+			},{
+				"text": "图书",
+				"pagePath": "pages/library/index",
+				"iconPath": "static/img/book.png",
+				"selectedIconPath": "static/img/book-active.png"
+			},{
+				"text": "导航",
+				"pagePath":"pages/guide/index",
+				"iconPath": "static/img/yuedu.png",
+				"selectedIconPath": "static/img/yuedu_hl.png"
+			},{
+				"text": "听书",
+				"pagePath":"pages/bookspeak/index",
+				"iconPath": "static/img/music.png",
+				"selectedIconPath": "static/img/music_hl.png"
+			}
+		]
 	}
 }
