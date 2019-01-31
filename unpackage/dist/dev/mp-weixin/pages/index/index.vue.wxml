@@ -1,3 +1,1 @@
-<template name="5c2d7dc1"><view class="_view 5c2d7dc1 content"><swiper autoplay="true" indicator-dots="true" circular="true" style="height: 400rpx;" class="_swiper 5c2d7dc1"><swiper-item wx:key="key" key="{{key}}" wx:for="{{imgUrls}}" wx:for-index="key" wx:for-item="img" class="_swiper-item 5c2d7dc1"><image src="{{img}}" style="height: 400rpx;" class="_image 5c2d7dc1"></image></swiper-item></swiper><view class="_view 5c2d7dc1">
-			dsad
-		</view></view></template>
+<template name="fdfd28ca"><view class="_view fdfd28ca content"><swiper autoplay="true" indicator-dots="true" circular="true" style="height: 400rpx;" class="_swiper fdfd28ca"><swiper-item wx:key="key" key="{{key}}" wx:for="{{imgUrls}}" wx:for-index="key" wx:for-item="img" class="_swiper-item fdfd28ca"><image src="{{img}}" style="height: 400rpx;" class="_image fdfd28ca"></image></swiper-item></swiper><view class="_view fdfd28ca">dsad</view></view></template>

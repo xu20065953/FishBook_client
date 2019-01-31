@@ -1,12 +1,50 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/bookmark/index",
+    "pages/library/index",
+    "pages/guide/index",
+    "pages/bookspeak/index",
+    "pages/index/index",
+    "pages/webview/webview"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "鱼书",
     "navigationBarBackgroundColor": "#FF80AB",
-    "backgroundColor": "#EFEFEF"
+    "backgroundColor": "#EFEFEF",
+    "navigationStyle": "default"
+  },
+  "usingComponents": {},
+  "tabBar": {
+    "color": "#444444",
+    "selectedColor": "#FF80AB",
+    "borderStyle": "black",
+    "list": [
+      {
+        "text": "书架",
+        "pagePath": "pages/bookmark/index",
+        "iconPath": "static/img/yuedu.png",
+        "selectedIconPath": "static/img/yuedu_hl.png"
+      },
+      {
+        "text": "书城",
+        "pagePath": "pages/library/index",
+        "iconPath": "static/img/book.png",
+        "selectedIconPath": "static/img/book-active.png"
+      },
+      {
+        "text": "导航",
+        "pagePath": "pages/guide/index",
+        "iconPath": "static/img/yuedu.png",
+        "selectedIconPath": "static/img/yuedu_hl.png"
+      },
+      {
+        "text": "听书",
+        "pagePath": "pages/bookspeak/index",
+        "iconPath": "static/img/music.png",
+        "selectedIconPath": "static/img/music_hl.png"
+      }
+    ]
   }
 }

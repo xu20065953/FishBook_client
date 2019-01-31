@@ -1,1 +1,9 @@
+<import src="/node-modules/@dcloudio/uni-ui/lib/uni-collapse/uni-collapse.vue.wxml" />
+<import src="/node-modules/@dcloudio/uni-ui/lib/uni-collapse-item/uni-collapse-item.vue.wxml" />
+
+<template name="d4ce9376-default-d4ce9376-0"><view class="_view d4ce9376 novel-nav-wrap"><view class="_view d4ce9376 flex"><view class="_view d4ce9376 flex-item" bindtap="handleProxy" data-name="{{item.name}}" data-url="{{item.url}}" wx:key="index" key="{{index}}" data-eventid="{{'d4ce9376-0-'+index}}" data-comkey="{{$k}}" wx:for="{{navlist.original_nav}}" wx:for-index="index" wx:for-item="item">{{item.name}}</view></view></view></template>
+
+<template name="d4ce9376-default-d4ce9376-1"><view class="_view d4ce9376 novel-nav-wrap"><view class="_view d4ce9376 flex"><view class="_view d4ce9376 flex-item" bindtap="handleProxy" data-name="{{item.name}}" data-url="{{item.url}}" wx:key="index" key="{{index}}" data-eventid="{{'d4ce9376-1-'+index}}" data-comkey="{{$k}}" wx:for="{{navlist.free_nav}}" wx:for-index="index" wx:for-item="item">{{item.name}}</view></view></view></template>
+
+<template name="d4ce9376-default-d4ce9376-2"><template title="正版小说" data="{{...$root['0'], ...$root[$kk+'d4ce9376-0'],$root, $slotdefault:'d4ce9376-default-d4ce9376-0'}}" is="edac28ba"></template><template title="免费小说" data="{{...$root['0'], ...$root[$kk+'d4ce9376-1'],$root, $slotdefault:'d4ce9376-default-d4ce9376-1'}}" is="edac28ba"></template></template>
 

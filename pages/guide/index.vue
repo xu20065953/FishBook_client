@@ -1,26 +1,31 @@
 <template>
 	<view class="novel-guide">
-		<!-- <web-view src="http://m.jingyu.com/index/nboy">360小说</web-view> -->
-		<view class="uni-padding-wrap">
-			
-		</view>
-		<uni-collapse accordion="true">
+		<uni-collapse>
 			<uni-collapse-item title="正版小说" :open="true">
 				<view class="novel-nav-wrap">
 					<view class="flex">
-						<view class="flex-item">1</view>
-						<view class="flex-item">2</view>
-						<view class="flex-item">3</view>
-						<view class="flex-item">4</view>
+						<view class="flex-item" v-for="(item, index) in navlist.original_nav" 
+						@click="goTo" 
+						:data-name="item.name" 
+						:data-url="item.url" 
+						:key="index">{{item.name}}</view>
 					</view>
 				</view>
 			</uni-collapse-item>
 			<uni-collapse-item title="免费小说" :open="true">
-				手风琴效果1
+				<view class="novel-nav-wrap">
+					<view class="flex">
+						<view class="flex-item" v-for="(item, index) in navlist.free_nav" 
+						@click="goTo" 
+						:data-name="item.name" 
+						:data-url="item.url" 
+						:key="index">{{item.name}}</view>
+					</view>
+				</view>
 			</uni-collapse-item>
-			<uni-collapse-item title="推荐小说" :open="true">
+			<!-- <uni-collapse-item title="推荐小说" :open="true">
 				手风琴效果2
-			</uni-collapse-item>
+			</uni-collapse-item> -->
 		</uni-collapse>
 	</view>
 </template>
@@ -40,6 +45,15 @@
 		},
 		onLoad(){
 			console.log(this.navlist)
+		},
+		methods:{
+			goTo(e){
+				let item = e.target.dataset
+				//console.log(e, item)
+				uni.navigateTo({
+					url: '/pages/webview/webview?name=' + item.name + '&url=' + item.url
+				});
+			}
 		}
 	}
 </script>
@@ -56,6 +70,8 @@
 		.flex-item{
 			flex: 0 0 33.3333%;
 			text-align: center;
+			font-size: 32upx;
+			padding: 10upx 0;
 		}
 		.novel-nav-wrap{
 			// padding-left: 40upx;
